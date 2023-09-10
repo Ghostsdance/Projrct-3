@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>College Coordinating</title>
+  <style>
+    body {
+      text-align: center;
+      border-color: red;
+    }
+    fieldset {
+      border-color: red;
+      border-width: 5px;
+    }
+    h1 {
+      color: Orange;
+      text-align: left;
+
+    }
+    label {
+      color: red;
+
+    }
+    input {
+      color: green;
+      border-color: red;
+      background-color: pink;
+      border-style: outside;
+
+    }
+  </style>
+
+</head>
+<body>
+  <form action="#" method="post" accept-charset="utf-8">
+    <h1>College Coordinating</h1>
+    <fieldset>
+      <legend>Coordinator Information</legend>
+      <input type="image" name="moath" id="moath" src="../img/1.jpg" alt="" width="30px" height="60px" /><br />
+      <!-- Full Name input with autocomplete for the name -->
+      <label for="full_name">Full Name:</label><br>
+      <input
+      type="text"
+      name="full_name"
+      id="full_name"
+      placeholder="Enter your Name"
+      value="Moath Albrashi"
+      autocomplete="name"
+      readonly
+      >
+      <keygen name="security "></keygen>
+
+
+    <br>
+
+    <!-- Email input with autocomplete for email -->
+    <label for="Email">Email:</label><br>
+    <input
+    type="email"
+    name="Email"
+    id="Email"
+    placeholder="Enter your Email"
+    required
+    autocomplete="email"
+    autofocus
+    ><br>
+
+    <!-- Password input with readonly attribute -->
+    <label for="password">Password:</label><br>
+    <div class="#password">
+
+
+      <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Enter Password"
+      required
+      maxlength="2"
+      minlength="2"
+      ><br>
+
+    </div>
+    <!-- Select menu for choosing gender -->
+    <label for="gender">Gender:</label><br>
+    <select
+      name="gender"
+      id="gender"
+      required
+      >
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br>
+
+    <!-- Radio buttons for selecting the system type -->
+    <label for="Type"><h2>The system</h2></label><br>
+    <input
+    type="radio"
+    name="Type"
+    id="public"
+    value="Public"
+    required
+    >Public<br>
+    <input
+    type="radio"
+    name="Type"
+    id="parallel"
+    value="Parallel"
+    required
+    >Parallel<br>
+    <input
+    type="radio"
+    name="Type"
+    id="private"
+    value="Private expense"
+    required
+    >Private expense<br>
+
+    <!-- Checkboxes for selecting university majors -->
+    <label for="Collages"><h2>Majors of university</h2></label><br>
+    <input
+    type="checkbox"
+    name="Collages"
+    id="medication"
+    value="Medication (full)"
+    checked
+    readonly
+    >Medication <sub>(full)</sub><br>
+    <input
+    type="checkbox"
+    name="Collages"
+    id="engineering"
+    value="Engineering"
+    >Engineering<br>
+    <input
+    type="checkbox"
+    name="Collages"
+    id="computer"
+    value="Computer"
+    >Computer<br>
+
+    <!-- Comments textarea -->
+    <div class="comment">
+
+
+      <label for="comments">Comments:</label><br>
+      <textarea
+        name="comments"
+        id="comments"
+        rows="4"
+        cols="50"
+        placeholder="Enter your comments"
+
+        ></textarea><br>
+
+
+    </div>
+    <!-- File upload input -->
+    <label for="file_upload">Upload a File:</label><br>
+    <input
+    type="file"
+    name="file_upload"
+    id="file_upload"
+    ><br>
+
+    <!-- Date of Birth input with the disabled attribute -->
+    <label for="birth_date">Date of Birth:</label><br>
+    <input
+    type="date"
+    name="birth_date"
+    id="birth_date"
+    required
+
+
+    ><br>
+
+    <!-- Favorite Color input -->
+    <label for="color">Favorite Color:</label><br>
+    <input
+    type="color"
+    name="color"
+    disabled
+    id="color"
+    ><br>
+
+    <!-- Website URL input -->
+    <label for="website">Website URL:</label><br>
+    <input
+    type="url"
+    name="website"
+    id="website"
+    placeholder="https://example.com"
+    ><br>
+
+    <!-- Profile Picture file upload -->
+    <label for="avatar">Profile Picture:</label><br>
+    <input
+    type="file"
+    name="avatar"
+    id="avatar"
+    accept="img"
+    ><br>
+
+    <!-- Twitter Handle input with a datalist -->
+    <label for="twitter">Twitter Handle:</label><br>
+    <input
+    type="text"
+    name="twitter"
+    id="twitter"
+    placeholder="@yourhandle"
+    list="twitter_list"
+    ><br>
+    <datalist id="twitter_list">
+      <option value="@example1">Example1</option>
+      <option value="@example2">Example2</option>
+      <option value="@example3">Example3</option>
+    </datalist><br>
+
+    <!-- Bio textarea for personal information -->
+    <label for="bio">Bio:</label><br>
+    <textarea id="txt"
+      name="bio"
+      id="bio"
+      rows="4"
+      cols="50"
+      placeholder="Tell us about yourself"
+      ></textarea><br>
+    <label for="Number ">Number </label>
+    <input type="number" name="number " id="number " value="10" max="100" min="10" /><br />
+    <label for="Range">Range</label>
+    <input type="range" name="range" id="range" value="The Range" /><hr />
+    <output name="x" for="a b"></output>
+    <br />
+    <!-- Submit and Reset and button -->
+
+    <input
+    type="submit"
+    value="Submit"
+    >
+    <input type="button" onclick="alert('Moath Hadi')" value="Bottun" />
+  </fieldset>
+
+  <input type="reset" value="reset" />
+  <form />
+</body>
+</html>
