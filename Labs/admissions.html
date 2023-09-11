@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Document type declaration -->
+<html lang="en">
+<!-- Language attribute for English -->
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding for Unicode (UTF-8) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport configuration for responsive design -->
+  <title>Admissions</title> <!-- Page title displayed in the browser tab -->
+  <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS stylesheet for styling -->
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> <!-- List item with a hyperlink to the homepage -->
+      <li><a href="about.html">About Us</a></li> <!-- List item with a hyperlink to the About Us page -->
+      <li><a href="comments.html">Comments</a></li> <!-- List item with a hyperlink to the Comments page -->
+      <li><a href="admissions.html">Admissions</a></li> <!-- List item with a hyperlink to the Admissions page -->
+    </ul>
+  </nav>
+
+  <!-- Site Logo -->
+  <div class="logo">
+    <img src="../3.png" alt="College Logo"> <!-- Image tag displaying the college logo -->
+  </div>
+
+  <!-- Admissions Page Content -->
+  <div class="admissions">
+    <h1>Admissions</h1> <!-- Main heading for the Admissions page -->
+    <p>
+      Explore our admission process and requirements below.
+    </p>
+    <!-- Introduction paragraph -->
+
+    <!-- Admission Requirements Section -->
+    <div class="requirements-section">
+      <h2>Admission Requirements</h2> <!-- Subheading for the Admission Requirements section -->
+      <ul>
+        <li>High school diploma or equivalent.</li> <!-- List item for the first requirement -->
+        <li>Completed application form.</li> <!-- List item for the second requirement -->
+        <li>Transcripts of previous academic records.</li> <!-- List item for the third requirement -->
+        <li>Letters of recommendation.</li> <!-- List item for the fourth requirement -->
+      </ul>
+    </div>
+
+    <!-- Application Form Section -->
+    <div class="application-section">
+      <h2>Application Form</h2> <!-- Subheading for the Application Form section -->
+      <p>
+        Complete the application form below to start your admission process.
+      </p>
+      <!-- Instructions for the application form -->
+
+      <!-- Admission Form -->
+      <form id="admission-form">
+        <label for="name">Full Name:</label> <!-- Label for the Full Name input field -->
+        <input type="text" id="name" name="name" required><br> <!-- Input field for the user's full name -->
+
+        <label for="email">Email:</label> <!-- Label for the Email input field -->
+        <input type="email" id="email" name="email" required><br> <!-- Input field for the user's email -->
+
+        <label for="phone">Phone Number:</label> <!-- Label for the Phone Number input field -->
+        <input type="tel" id="phone" name="phone" required><br> <!-- Input field for the user's phone number -->
+
+        <label for="program">Program of Interest:</label> <!-- Label for the Program of Interest input field -->
+        <select id="program" name="program">
+          <option value="IT">IT</option> <!-- Option for Computer Science program -->
+          <option value="IS">IS</option> <!-- Option for Business Administration program -->
+          <option value="Cs">Cs</option> <!-- Option for Engineering program -->
+        </select><br> <!-- Dropdown menu for program selection -->
+
+        <button type="submit">Submit Application</button> <!-- Submit button to send the application form -->
+      </form>
+    </div>
+
+    <!-- Admission Data Table -->
+    <div class="admission-data">
+      <h2>Admission Data</h2> <!-- Subheading for the Admission Data section -->
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Program</th>
+          </tr>
+        </thead>
+        <tbody id="admission-data-body">
+          <!-- Admission data submitted via the form will be displayed here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JavaScript to handle form submission and display data in the table -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const admissionForm = document.getElementById("admission-form");
+      const admissionDataBody = document.getElementById("admission-data-body");
+
+      admissionForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const program = document.getElementById("program").value;
+
+        // Create a new table row with the form data
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${phone}</td>
+        <td>${program}</td>
+        `;
+
+        // Append the new row to the table
+        admissionDataBody.appendChild(newRow);
+
+        // Clear the form fields
+        admissionForm.reset();
+      });
+    });
+  </script>
+</body>
+</html>
